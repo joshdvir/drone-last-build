@@ -16,3 +16,4 @@ linux:
 
 darwin:
 	docker run --rm -v /Users/shuky/.go/src/drone-last-build:/go/src/drone-last-build -w /go/src/drone-last-build -e GOOS=darwin -e GOARCH=amd64 golang:1.6 go get && go build -v -v -o build/drone-last-build-darwin-amd64
+	hub release create -a bin/drone-last-build-darwin-amd64 drone-last-build-darwin-amd64
